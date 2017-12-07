@@ -20,7 +20,7 @@
 // defer to `object-assign`. If our Object.assign implementation is correct
 // (determined by `object-assign` internally) the polyfill will be discarded
 // and the native implementation used.
-Object.assign = require('object-assign')
+// Object.assign = require('object-assign')
 
 // 2) Promise
 // ------------------------------------
