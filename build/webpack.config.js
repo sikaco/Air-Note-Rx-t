@@ -2,7 +2,9 @@ const path = require('path')
 const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
+const HappyPack = require('happypack')
 const project = require('../project.config')
+const alias = require('./webpack.alias')
 
 const inProject = path.resolve.bind(path, project.basePath)
 const inProjectSrc = (file) => inProject(project.srcDir, file)
@@ -31,7 +33,8 @@ const config = {
       inProject(project.srcDir),
       'node_modules',
     ],
-    extensions: ['*', '.js', '.jsx', '.json'],
+    extensions: ['*', '.js', '.ts', '.tsx', '.json'], // todo: can I remove * and .json ?
+    alias
   },
   externals: project.externals,
   module: {
@@ -47,17 +50,24 @@ const config = {
   ],
 }
 
+// TypeScript
+// ------------------------------------
+config.module.rules.push({
+  test: /\.(ts|tsx)$/,
+  exclude: /node_modules/,
+  use: 'ts-loader'
+})
+
 // JavaScript
 // ------------------------------------
 config.module.rules.push({
-  test: /\.(js|jsx)$/,
+  test: /\.js$/,
   exclude: /node_modules/,
   use: [{
     loader: 'babel-loader',
     query: {
       cacheDirectory: true,
       plugins: [
-        'babel-plugin-transform-class-properties',
         'babel-plugin-syntax-dynamic-import',
         [
           'babel-plugin-transform-runtime',
@@ -75,7 +85,6 @@ config.module.rules.push({
         ],
       ],
       presets: [
-        'babel-preset-react',
         ['babel-preset-env', {
           modules: false,
           targets: {
@@ -85,7 +94,7 @@ config.module.rules.push({
         }],
       ]
     },
-  }],
+  }]
 })
 
 // Styles

@@ -1,19 +1,18 @@
 import React from 'react'
 import { browserHistory, Router } from 'react-router'
 import { Provider } from 'react-redux'
-import PropTypes from 'prop-types'
 
-class App extends React.Component {
-  static propTypes = {
-    store: PropTypes.object.isRequired,
-    routes: PropTypes.object.isRequired,
-  }
+interface AppProps {
+  store: object
+  routes: object
+}
 
-  shouldComponentUpdate () {
+class App extends React.Component<AppProps> {
+  shouldComponentUpdate() {
     return false
   }
 
-  render () {
+  render() {
     return (
       <Provider store={this.props.store}>
         <div style={{ height: '100%' }}>

@@ -23,6 +23,8 @@ module.exports = {
   verbose: false,
   /** The list of modules to bundle separately from the core application code */
   vendors: [
+    'lodash',
+    'moment',
     'react',
     'react-dom',
     'redux',
