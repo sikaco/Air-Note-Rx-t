@@ -2,19 +2,24 @@
 # yarn lockfile v1
 
 
-"@types/lodash@^4.14.88":
-  version "4.14.88"
-  resolved "http://registry.npm.taobao.org/@types/lodash/download/@types/lodash-4.14.88.tgz#97eaf2dc668f33ed8e511a5b627035f4ea20b0f5"
+"@types/lodash@^4.14.89":
+  version "4.14.89"
+  resolved "http://registry.npm.taobao.org/@types/lodash/download/@types/lodash-4.14.89.tgz#dd2114403d653a45c3d2f0cae1599949b99a5a3a"
 
-"@types/react-dom@^15.5.4":
-  version "15.5.6"
-  resolved "http://registry.npm.taobao.org/@types/react-dom/download/@types/react-dom-15.5.6.tgz#7794ff7822882b59b899c30294e1b1e62e97757e"
+"@types/node@*":
+  version "8.5.1"
+  resolved "http://registry.npm.taobao.org/@types/node/download/@types/node-8.5.1.tgz#4ec3020bcdfe2abffeef9ba3fbf26fca097514b5"
+
+"@types/react-dom@^16.0.3":
+  version "16.0.3"
+  resolved "http://registry.npm.taobao.org/@types/react-dom/download/@types/react-dom-16.0.3.tgz#8accad7eabdab4cca3e1a56f5ccb57de2da0ff64"
   dependencies:
-    "@types/react" "^15"
+    "@types/node" "*"
+    "@types/react" "*"
 
-"@types/react@^15", "@types/react@^15.5.4":
-  version "15.6.7"
-  resolved "http://registry.npm.taobao.org/@types/react/download/@types/react-15.6.7.tgz#e910b6aace59d8d0b48dd679c2c03cffedafeec6"
+"@types/react@*", "@types/react@^16.0.30":
+  version "16.0.30"
+  resolved "http://registry.npm.taobao.org/@types/react/download/@types/react-16.0.30.tgz#cca9b180160004df574519c3d7c559fb181d545f"
 
 "@types/webpack-env@^1.13.3":
   version "1.13.3"
@@ -1533,7 +1538,7 @@ create-hmac@^1.1.0, create-hmac@^1.1.2, create-hmac@^1.1.4:
     safe-buffer "^5.0.1"
     sha.js "^2.4.8"
 
-create-react-class@^15.5.1, create-react-class@^15.6.0:
+create-react-class@^15.5.1:
   version "15.6.2"
   resolved "http://registry.npm.taobao.org/create-react-class/download/create-react-class-15.6.2.tgz#cf1ed15f12aad7f14ef5f2dfe05e6c42f91ef02a"
   dependencies:
@@ -4842,7 +4847,7 @@ promise@^7.1.1:
   dependencies:
     asap "~2.0.3"
 
-prop-types@^15.5.10, prop-types@^15.5.4, prop-types@^15.5.6:
+prop-types@^15.5.10, prop-types@^15.5.4, prop-types@^15.5.6, prop-types@^15.6.0:
   version "15.6.0"
   resolved "http://registry.npm.taobao.org/prop-types/download/prop-types-15.6.0.tgz#ceaf083022fc46b4a35f69e13ef75aed0d639856"
   dependencies:
@@ -4964,14 +4969,14 @@ react-addons-test-utils@^15.5.1:
   version "15.6.2"
   resolved "http://registry.npm.taobao.org/react-addons-test-utils/download/react-addons-test-utils-15.6.2.tgz#c12b6efdc2247c10da7b8770d185080a7b047156"
 
-react-dom@^15.5.4:
-  version "15.6.2"
-  resolved "http://registry.npm.taobao.org/react-dom/download/react-dom-15.6.2.tgz#41cfadf693b757faf2708443a1d1fd5a02bef730"
+react-dom@^16.2.0:
+  version "16.2.0"
+  resolved "http://registry.npm.taobao.org/react-dom/download/react-dom-16.2.0.tgz#69003178601c0ca19b709b33a83369fe6124c044"
   dependencies:
-    fbjs "^0.8.9"
+    fbjs "^0.8.16"
     loose-envify "^1.1.0"
-    object-assign "^4.1.0"
-    prop-types "^15.5.10"
+    object-assign "^4.1.1"
+    prop-types "^15.6.0"
 
 react-element-to-jsx-string@^5.0.0:
   version "5.0.7"
@@ -5014,15 +5019,14 @@ react-test-renderer@^15.5.4:
     fbjs "^0.8.9"
     object-assign "^4.1.0"
 
-react@^15.5.4:
-  version "15.6.2"
-  resolved "http://registry.npm.taobao.org/react/download/react-15.6.2.tgz#dba0434ab439cfe82f108f0f511663908179aa72"
+react@^16.2.0:
+  version "16.2.0"
+  resolved "http://registry.npm.taobao.org/react/download/react-16.2.0.tgz#a31bd2dab89bff65d42134fa187f24d054c273ba"
   dependencies:
-    create-react-class "^15.6.0"
-    fbjs "^0.8.9"
+    fbjs "^0.8.16"
     loose-envify "^1.1.0"
-    object-assign "^4.1.0"
-    prop-types "^15.5.10"
+    object-assign "^4.1.1"
+    prop-types "^15.6.0"
 
 read-pkg-up@^1.0.1:
   version "1.0.1"
@@ -6053,9 +6057,9 @@ typedarray@^0.0.6:
   version "0.0.6"
   resolved "http://registry.npm.taobao.org/typedarray/download/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
 
-typescript@~2.2.0:
-  version "2.2.2"
-  resolved "http://registry.npm.taobao.org/typescript/download/typescript-2.2.2.tgz#606022508479b55ffa368b58fee963a03dfd7b0c"
+typescript@^2.6.2:
+  version "2.6.2"
+  resolved "http://registry.npm.taobao.org/typescript/download/typescript-2.6.2.tgz#3c5b6fd7f6de0914269027f03c0946758f7673a4"
 
 ua-parser-js@^0.7.9:
   version "0.7.17"
