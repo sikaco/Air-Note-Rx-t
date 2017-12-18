@@ -1,4 +1,4 @@
-import { applyMiddleware, compose, createStore as createReduxStore } from 'redux'
+import { applyMiddleware, compose, StoreEnhancer, createStore as createReduxStore } from 'redux'
 import thunk from 'redux-thunk'
 import { browserHistory } from 'react-router'
 import makeRootReducer from './reducers'
@@ -14,7 +14,7 @@ const createStore = (initialState: any = {}) => {
   // ======================================================
   // Store Enhancers
   // ======================================================
-  const enhancers = []
+  const enhancers: StoreEnhancer<StoreState>[] = []
   let composeEnhancers = compose
 
   if (__DEV__) {

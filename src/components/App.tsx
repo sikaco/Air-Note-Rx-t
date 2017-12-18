@@ -1,9 +1,10 @@
 import React from 'react'
 import { browserHistory, Router } from 'react-router'
 import { Provider } from 'react-redux'
+import { StoreState } from '../types/index'
 
 interface AppProps {
-  store: object
+  store: StoreState
   routes: object
 }
 

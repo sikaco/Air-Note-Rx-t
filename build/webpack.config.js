@@ -33,7 +33,7 @@ const config = {
       inProject(project.srcDir),
       'node_modules',
     ],
-    extensions: ['*', '.js', '.ts', '.tsx', '.json'], // todo: can I remove * and .json ?
+    extensions: ['.js', '.ts', '.tsx'],
     alias
   },
   externals: project.externals,
